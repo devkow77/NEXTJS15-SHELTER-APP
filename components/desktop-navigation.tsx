@@ -45,7 +45,7 @@ export function DesktopNavigation() {
   const pathname = usePathname();
 
   return (
-    <NavigationMenu viewport={false} className="hidden xl:block">
+    <NavigationMenu viewport={false} className="z-10 hidden xl:block">
       <NavigationMenuList>
         {/* HOME */}
         <NavigationMenuItem>
@@ -53,24 +53,37 @@ export function DesktopNavigation() {
             asChild
             className={`${pathname == "/" ? "text-pink-400" : ""} ${navigationMenuTriggerStyle()}`}
           >
-            <Link href="/">Home</Link>
+            <Link href="/" className="bg-transparent">
+              Home
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         {/* HOME */}
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/about">Who are we?</Link>
+          <NavigationMenuLink
+            asChild
+            className={`${pathname == "/about" ? "text-pink-400" : ""} ${navigationMenuTriggerStyle()}`}
+          >
+            <Link href="/about" className="bg-transparent">
+              Who are we?
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         {/* ANIMALS */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Animals</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-transparent">
+            Animals
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-4">
               {animals.length
                 ? animals.map(({ title, href, description }, index) => (
-                    <NavigationMenuLink asChild key={index}>
-                      <Link href={href}>
+                    <NavigationMenuLink
+                      className={`${pathname == href ? "text-pink-400" : ""}`}
+                      asChild
+                      key={index}
+                    >
+                      <Link href={href} className="bg-transparent">
                         <div className="font-medium">{title}</div>
                         <div className="text-muted-foreground">
                           {description}
@@ -84,14 +97,24 @@ export function DesktopNavigation() {
         </NavigationMenuItem>
         {/* BLOG */}
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/blog">Blog</Link>
+          <NavigationMenuLink
+            asChild
+            className={`${pathname == "/blog" ? "text-pink-400" : ""} ${navigationMenuTriggerStyle()}`}
+          >
+            <Link href="/blog" className="bg-transparent">
+              Blog
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         {/* CONTACT */}
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/contact">Contact</Link>
+          <NavigationMenuLink
+            asChild
+            className={`${pathname == "/contact" ? "text-pink-400" : ""} ${navigationMenuTriggerStyle()}`}
+          >
+            <Link href="/contact" className="bg-transparent">
+              Contact
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

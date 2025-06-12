@@ -4,6 +4,7 @@ import Navbar from "./navbar";
 import { DesktopNavigation } from "./desktop-navigation";
 import { Profile } from "./profile";
 import HamburgerBtn from "./hamburger-btn";
+import MobileMenu from "./mobile-menu";
 
 export {
   ThemeToggler,
@@ -12,4 +13,5 @@ export {
   DesktopNavigation,
   Profile,
   HamburgerBtn,
+  MobileMenu,
 };

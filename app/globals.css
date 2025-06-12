@@ -5,6 +5,10 @@ body {
   font-family: "Montserrat";
 }
 
+.header-height {
+  min-height: calc(100vh - 106px);
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
