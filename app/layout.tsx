@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${montserrat.variable} bg-neutral-50 antialiased dark:bg-neutral-950`}
+        className={`${montserrat.variable} bg-neutral-50 text-neutral-800 antialiased dark:bg-neutral-950 dark:text-white`}
       >
         <GlobalProvider>
           <Navbar />

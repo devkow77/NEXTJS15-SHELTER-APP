@@ -23,7 +23,7 @@ const buttonVariants = cva(
         donate:
           "bg-green-600 dark:bg-green-600 hover:bg-green-400 dark:hover:bg-green-400 text-white cursor-pointer",
         check:
-          "bg-pink-600 dark:bg-pink-600 hover:bg-pink-400 dark:hover:bg-pink-400 text-white cursor-pointer",
+          "bg-green-600 dark:bg-green-600 hover:bg-green-400 dark:hover:bg-green-400 text-white cursor-pointer",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

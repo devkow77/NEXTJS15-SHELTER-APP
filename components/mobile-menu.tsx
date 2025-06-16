@@ -55,7 +55,7 @@ const MobileMenu = () => {
         {links.map(({ name, href }, index) => (
           <li
             key={index}
-            className={`${pathname == href ? "text-pink-400" : ""} font-semibold`}
+            className={`${pathname == href ? "text-green-400" : ""} font-semibold`}
           >
             <a href={href}>{name}</a>
           </li>
