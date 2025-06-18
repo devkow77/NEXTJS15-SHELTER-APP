@@ -13,7 +13,7 @@ import {
 function AnimalSelector() {
   return (
     <Select>
-      <SelectTrigger className="w-[200px]">
+      <SelectTrigger className="w-[200px] bg-neutral-50">
         <SelectValue placeholder="Select a animal type" />
       </SelectTrigger>
       <SelectContent>

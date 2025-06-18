@@ -42,10 +42,10 @@ const steps: Step[] = [
 
 const HowToAdopt = () => {
   return (
-    <section className="from-green-950 to-neutral-950 py-12 dark:bg-gradient-to-b">
+    <section className="from-green-950 to-neutral-950 pt-16 lg:pt-32 dark:bg-gradient-to-b">
       <Container className="space-y-12">
         <h2 className="text-center text-2xl font-black lg:text-3xl">
-          How to <span className="text-green-600">Adopt</span> a Pet?
+          How to Adopt Pet?
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
           {steps.map(({ number, title, description }: Step) => (

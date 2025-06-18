@@ -1,13 +1,19 @@
-import { Animals, Header, HowToAdopt } from "@/components/pages/home/index";
+import {
+  Animals,
+  Header,
+  HowToAdopt,
+  VideoBaner,
+} from "@/components/pages/home/index";
 
 export default function Home() {
   return (
-    <div className="lg:space-y-16">
+    <div className="space-y-16 lg:space-y-32">
       <div>
         <Header />
         <HowToAdopt />
       </div>
       <Animals />
+      <VideoBaner />
     </div>
   );
 }

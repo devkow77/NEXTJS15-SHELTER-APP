@@ -49,13 +49,13 @@ const MobileMenu = () => {
       animate={{ x: "0%" }}
       exit={{ x: "100%" }}
       transition={{ duration: 0.2 }}
-      className="fixed top-0 z-10 flex h-screen w-full flex-col items-center justify-center gap-4 dark:bg-neutral-950"
+      className="fixed top-0 z-10 flex h-screen w-full flex-col items-center justify-center gap-4 bg-neutral-50 dark:bg-neutral-950"
     >
       <ul className="space-y-6">
         {links.map(({ name, href }, index) => (
           <li
             key={index}
-            className={`${pathname == href ? "text-green-400" : ""} font-semibold`}
+            className={`${pathname == href ? "text-green-600" : ""} font-semibold`}
           >
             <a href={href}>{name}</a>
           </li>
