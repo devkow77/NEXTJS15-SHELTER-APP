@@ -5,6 +5,7 @@ import { DesktopNavigation } from "./desktop-navigation";
 import { Profile } from "./profile";
 import HamburgerBtn from "./hamburger-btn";
 import MobileMenu from "./mobile-menu";
+import AnimalSelector from "./animal-selector";
 
 export {
   ThemeToggler,
@@ -14,4 +15,5 @@ export {
   Profile,
   HamburgerBtn,
   MobileMenu,
+  AnimalSelector,
 };

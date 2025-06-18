@@ -57,7 +57,9 @@ const HowToAdopt = () => {
                 {number}
               </div>
               <h3 className="font-semibold">{title}</h3>
-              <p className="text-sm dark:opacity-80">{description}</p>
+              <p className="text-sm lg:text-base dark:opacity-80">
+                {description}
+              </p>
             </div>
           ))}
         </div>

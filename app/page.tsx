@@ -1,4 +1,4 @@
-import { Header, HowToAdopt } from "@/components/pages/home/index";
+import { Animals, Header, HowToAdopt } from "@/components/pages/home/index";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
         <Header />
         <HowToAdopt />
       </div>
+      <Animals />
     </div>
   );
 }
