@@ -37,7 +37,7 @@ const Header = () => {
               alt="pet"
               width={400}
               height={400}
-              src="/cat.avif"
+              src="/cat.jpg"
               className="absolute h-full w-full rounded-full object-cover object-center"
             />
           </div>

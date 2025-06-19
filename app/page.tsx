@@ -4,6 +4,7 @@ import {
   HowToAdopt,
   VideoBaner,
   Faq,
+  Footer,
 } from "@/components/pages/home/index";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Animals />
       <VideoBaner />
       <Faq />
+      <Footer />
     </div>
   );
 }

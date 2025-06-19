@@ -7,6 +7,7 @@ import HamburgerBtn from "./hamburger-btn";
 import MobileMenu from "./mobile-menu";
 import AnimalSelector from "./animal-selector";
 import FaqAccordion from "./faq-accordion";
+import GoogleMap from "./google-maps";
 
 export {
   ThemeToggler,
@@ -18,4 +19,5 @@ export {
   MobileMenu,
   AnimalSelector,
   FaqAccordion,
+  GoogleMap,
 };
