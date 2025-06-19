@@ -3,6 +3,7 @@ import {
   Header,
   HowToAdopt,
   VideoBaner,
+  Faq,
 } from "@/components/pages/home/index";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       </div>
       <Animals />
       <VideoBaner />
+      <Faq />
     </div>
   );
 }

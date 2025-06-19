@@ -51,7 +51,7 @@ export function DesktopNavigation() {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className={`${pathname == "/" ? "text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
+            className={`${pathname == "/" ? "text-green-600 dark:text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
           >
             <Link href="/" className="bg-transparent">
               Home
@@ -62,7 +62,7 @@ export function DesktopNavigation() {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className={`${pathname == "/about" ? "text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
+            className={`${pathname == "/about" ? "text-green-600 dark:text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
           >
             <Link href="/about" className="bg-transparent">
               Who are we?
@@ -79,7 +79,7 @@ export function DesktopNavigation() {
               {animals.length
                 ? animals.map(({ title, href, description }, index) => (
                     <NavigationMenuLink
-                      className={`${pathname == href ? "text-green-400" : ""}`}
+                      className={`${pathname == href ? "text-green-600 dark:text-green-400" : ""}`}
                       asChild
                       key={index}
                     >
@@ -99,7 +99,7 @@ export function DesktopNavigation() {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className={`${pathname == "/blog" ? "text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
+            className={`${pathname == "/blog" ? "text-green-600 dark:text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
           >
             <Link href="/blog" className="bg-transparent">
               Blog
@@ -110,7 +110,7 @@ export function DesktopNavigation() {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className={`${pathname == "/contact" ? "text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
+            className={`${pathname == "/contact" ? "text-green-600 dark:text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
           >
             <Link href="/contact" className="bg-transparent">
               Contact

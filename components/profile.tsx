@@ -38,7 +38,7 @@ export function Profile() {
 
       <DropdownMenuContent
         align="end"
-        className="w-48 rounded-xl border border-white/10 bg-white/5 p-2 shadow-lg backdrop-blur-md"
+        className="bg-popover w-48 rounded-xl border border-white/10 p-2 shadow-lg backdrop-blur-md"
       >
         <DropdownMenuLabel>Moje konto</DropdownMenuLabel>
         <DropdownMenuSeparator />
@@ -50,7 +50,7 @@ export function Profile() {
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem
-          className="text-red-400"
+          className="font-semibold text-red-600"
           onClick={() => console.log("Wyloguj się")}
         >
           Wyloguj się

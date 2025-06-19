@@ -6,6 +6,7 @@ import { Profile } from "./profile";
 import HamburgerBtn from "./hamburger-btn";
 import MobileMenu from "./mobile-menu";
 import AnimalSelector from "./animal-selector";
+import FaqAccordion from "./faq-accordion";
 
 export {
   ThemeToggler,
@@ -16,4 +17,5 @@ export {
   HamburgerBtn,
   MobileMenu,
   AnimalSelector,
+  FaqAccordion,
 };
