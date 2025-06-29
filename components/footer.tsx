@@ -1,10 +1,12 @@
+"use client";
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Container, GoogleMap } from "@/components/index";
 import { FaFacebookSquare, FaInstagram, FaTiktok } from "react-icons/fa";
 import Link from "next/link";
-import { link } from "fs";
+import { usePathname } from "next/navigation";
 
 type Link = {
   name: string;
@@ -26,7 +28,7 @@ const links: Link[] = [
   },
   {
     name: "Blog",
-    href: "/blog",
+    href: "/blog/page/1",
   },
   {
     name: "Contact",
@@ -35,8 +37,29 @@ const links: Link[] = [
 ];
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  const colorLinksByPathname = (pathname: string) => {
+    if (pathname === "/") {
+      return "dark:hover:text-green-400 hover:text-green-600";
+    }
+
+    if (
+      pathname.startsWith("/blog/post/") ||
+      pathname.startsWith("/blog/page/")
+    ) {
+      return "dark:hover:text-blue-400 hover:text-blue-600";
+    }
+
+    if (pathname === "/contact") {
+      return "dark:hover:text-purple-400 hover:text-purple-600";
+    }
+
+    return ""; // fallback
+  };
+
   return (
-    <footer>
+    <footer className="mt-16 lg:mt-32">
       <Container>
         <GoogleMap
           apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
@@ -74,7 +97,7 @@ const Footer = () => {
                 {links.map(({ name, href }: Link, index) => (
                   <li
                     key={index}
-                    className="text-sm duration-200 hover:text-green-600 lg:text-base dark:hover:text-green-400"
+                    className={`text-sm duration-200 ${colorLinksByPathname(pathname)} lg:text-base`}
                   >
                     <Link href={href}>{name}</Link>
                   </li>

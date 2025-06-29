@@ -2,7 +2,7 @@ import "./globals.css";
 import { Montserrat } from "next/font/google";
 import type { Metadata } from "next";
 import GlobalProvider from "@/components/providers/global-provider";
-import { Navbar } from "@/components/index";
+import { Navbar, Footer } from "@/components/index";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -27,6 +27,7 @@ export default function RootLayout({
         <GlobalProvider>
           <Navbar />
           {children}
+          <Footer />
         </GlobalProvider>
       </body>
     </html>

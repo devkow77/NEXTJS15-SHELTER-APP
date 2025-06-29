@@ -4,12 +4,11 @@ import {
   HowToAdopt,
   VideoBaner,
   Faq,
-  Footer,
 } from "@/components/pages/home/index";
 
 export default function Home() {
   return (
-    <div className="space-y-16 lg:space-y-32">
+    <main className="space-y-16 lg:space-y-32">
       <div>
         <Header />
         <HowToAdopt />
@@ -17,7 +16,6 @@ export default function Home() {
       <Animals />
       <VideoBaner />
       <Faq />
-      <Footer />
-    </div>
+    </main>
   );
 }

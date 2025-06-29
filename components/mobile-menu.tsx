@@ -24,7 +24,7 @@ const links: Link[] = [
   },
   {
     name: "Blog",
-    href: "/blog",
+    href: "/blog/page/1",
   },
   {
     name: "Contact",
@@ -35,7 +35,25 @@ const links: Link[] = [
 const MobileMenu = () => {
   const pathname = usePathname();
 
-  // 🔒 Disable scroll on mount
+  const colorLinksByPathname = (pathname: string) => {
+    if (pathname === "/") {
+      return "dark:text-green-400 text-green-600";
+    }
+
+    if (
+      pathname.startsWith("/blog/post/") ||
+      pathname.startsWith("/blog/page/")
+    ) {
+      return "dark:text-blue-400 text-blue-600";
+    }
+
+    if (pathname === "/contact") {
+      return "dark:text-purple-400 text-purple-600";
+    }
+
+    return ""; // fallback
+  };
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -55,7 +73,7 @@ const MobileMenu = () => {
         {links.map(({ name, href }, index) => (
           <li
             key={index}
-            className={`${pathname == href ? "text-green-600" : ""} font-semibold`}
+            className={`${pathname == href ? colorLinksByPathname(pathname) : ""} font-semibold`}
           >
             <a href={href}>{name}</a>
           </li>

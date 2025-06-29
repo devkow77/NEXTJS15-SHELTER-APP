@@ -99,9 +99,9 @@ export function DesktopNavigation() {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className={`${pathname == "/blog" ? "text-green-600 dark:text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
+            className={`${pathname == "/blog/page/1" ? "text-blue-600 dark:text-blue-400" : ""} ${navigationMenuTriggerStyle()}`}
           >
-            <Link href="/blog" className="bg-transparent">
+            <Link href="/blog/page/1" className="bg-transparent">
               Blog
             </Link>
           </NavigationMenuLink>
@@ -110,7 +110,7 @@ export function DesktopNavigation() {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className={`${pathname == "/contact" ? "text-green-600 dark:text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
+            className={`${pathname == "/contact" ? "text-purple-600 dark:text-purple-400" : ""} ${navigationMenuTriggerStyle()}`}
           >
             <Link href="/contact" className="bg-transparent">
               Contact
