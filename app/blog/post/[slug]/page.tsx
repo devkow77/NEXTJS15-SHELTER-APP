@@ -63,8 +63,10 @@ function formatDate(isoDate: string) {
   });
 }
 
-const Post = async ({ params }: { params: { slug: string } }) => {
-  const { post, otherPosts } = await getPostAndOthers(params.slug);
+const Post = async ({ params }: any) => {
+  const { slug } = await params;
+  const { post, otherPosts } = await getPostAndOthers(slug);
+
   return (
     <main>
       <Container className="space-y-16 lg:space-y-32">

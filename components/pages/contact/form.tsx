@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { sendMessage } from "@/lib/mail";
 import { formSchema } from "@/lib/schema";
 import Container from "@/components/container";
 
@@ -30,7 +29,6 @@ const ContactForm = () => {
   const onSubmit = async (data: any) => {
     const formData = JSON.parse(JSON.stringify(data));
     try {
-      //   await sendMessage(formData);
       form.reset();
     } catch (err) {
       console.log(err);

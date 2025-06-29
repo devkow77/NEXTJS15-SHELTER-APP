@@ -21,7 +21,7 @@ const query = `
 }  
 `;
 
-async function getPosts() {
+async function getPosts(pageId: string) {
   const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
     method: "POST",
     headers: {
@@ -33,7 +33,16 @@ async function getPosts() {
   });
 
   const json = await response.json();
-  return json.data.posts;
+  const posts = json.data.posts;
+
+  const currentPage = Math.max(1, parseInt(pageId) || 1);
+  const totalPages = Math.ceil(posts.length / POST_PER_PAGE);
+  const slicedPosts = posts.slice(
+    (currentPage - 1) * POST_PER_PAGE,
+    currentPage * POST_PER_PAGE,
+  );
+
+  return { slicedPosts, currentPage, totalPages };
 }
 
 function formatDate(isoDate: string) {
@@ -48,13 +57,7 @@ function formatDate(isoDate: string) {
 const POST_PER_PAGE = 5;
 
 const GridBlog = async ({ pageId }: { pageId: string }) => {
-  const posts = await getPosts();
-  const currentPage = Math.max(1, parseInt(pageId) || 1);
-  const totalPages = Math.ceil(posts.length / POST_PER_PAGE);
-  const slicedPosts = posts.slice(
-    (currentPage - 1) * POST_PER_PAGE,
-    currentPage * POST_PER_PAGE,
-  );
+  const { slicedPosts, totalPages, currentPage } = await getPosts(pageId);
 
   return (
     <section>
