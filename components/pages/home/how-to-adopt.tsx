@@ -42,7 +42,7 @@ const steps: Step[] = [
 
 const HowToAdopt = () => {
   return (
-    <section className="from-green-950 to-neutral-950 pt-16 lg:pt-32 dark:bg-gradient-to-b">
+    <section className="from-green-950 to-neutral-950 dark:bg-gradient-to-b">
       <Container className="space-y-12">
         <h2 className="text-center text-2xl font-black lg:text-3xl">
           How to Adopt Pet?

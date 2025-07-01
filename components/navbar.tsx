@@ -16,7 +16,7 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 
   return (
-    <nav>
+    <nav className="mb-8 md:mb-16">
       <Container className="flex items-center justify-between py-6">
         <h1 className="font-semibold">Ani🐈al 🐍helter</h1>
         <DesktopNavigation />

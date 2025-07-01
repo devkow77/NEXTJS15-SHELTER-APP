@@ -1,6 +1,6 @@
 import { Header, BeforeWeStart, GridBlog } from "@/components/pages/blog";
 
-export default async function Blog({ params }: any) {
+const Blog = async ({ params }: any) => {
   const { page } = await params;
 
   return (
@@ -10,4 +10,6 @@ export default async function Blog({ params }: any) {
       <GridBlog pageId={page} />
     </main>
   );
-}
+};
+
+export default Blog;

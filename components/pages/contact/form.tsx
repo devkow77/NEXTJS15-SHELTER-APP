@@ -53,7 +53,7 @@ const ContactForm = () => {
                   <FormControl>
                     <Input
                       placeholder="example@email.com"
-                      className="dark:placeholder:text-opacity-60 dark:bg-white/10"
+                      className="dark:placeholder:text-opacity-60"
                       {...field}
                     />
                   </FormControl>
@@ -70,7 +70,7 @@ const ContactForm = () => {
                   <FormControl>
                     <Textarea
                       placeholder="Write a message..."
-                      className="dark:placeholder:text-opacity-60 h-30 resize-none dark:bg-white/10"
+                      className="dark:placeholder:text-opacity-60 h-30 resize-none"
                       {...field}
                     />
                   </FormControl>
@@ -80,7 +80,7 @@ const ContactForm = () => {
             />
             <Button
               type="submit"
-              variant={"contact"}
+              variant={"purple"}
               className="w-full"
               disabled={form.formState.isSubmitting}
             >

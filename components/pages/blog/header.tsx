@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <header className="header-height pt-8 md:pt-16 dark:text-white">
+    <header>
       <Container className="flex flex-col gap-10 sm:flex-row sm:gap-6">
         <section className="space-y-3 sm:w-1/2 lg:space-y-6">
           <h1 className="text-3xl font-black md:text-4xl lg:text-5xl">
@@ -21,7 +21,7 @@ const Header = () => {
             the ones that bark or pur
           </p>
           <Link href="/animals">
-            <Button variant={"blog"}>Lets see 🩵</Button>
+            <Button variant={"blue"}>Lets see 🩵</Button>
           </Link>
         </section>
         <section className="grid aspect-square grid-cols-2 gap-3 rounded-2xl sm:w-1/2 md:gap-6">

@@ -44,6 +44,10 @@ const Footer = () => {
       return "dark:hover:text-green-400 hover:text-green-600";
     }
 
+    if (pathname === "/about") {
+      return "dark:hover:text-pink-400 hover:text-pink-600";
+    }
+
     if (
       pathname.startsWith("/blog/post/") ||
       pathname.startsWith("/blog/page/")
@@ -75,7 +79,7 @@ const Footer = () => {
             </h3>
             <div className="flex gap-4">
               <Input type="email" placeholder="Email" />
-              <Button type="submit" variant="check">
+              <Button type="submit" variant={"green"}>
                 Subscribe
               </Button>
             </div>

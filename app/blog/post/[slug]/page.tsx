@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "@/components/index";
 import Link from "next/link";
 import Image from "next/image";
+import { formatDate } from "@/lib/functions";
 
 const getPostAndOthers = async (slug: string) => {
   const query = `
@@ -53,15 +54,6 @@ const getPostAndOthers = async (slug: string) => {
     otherPosts: json.data.posts,
   };
 };
-
-function formatDate(isoDate: string) {
-  const date = new Date(isoDate);
-  return date.toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  });
-}
 
 const Post = async ({ params }: any) => {
   const { slug } = await params;

@@ -98,7 +98,7 @@ function FaqAccordion() {
           </p>
         </AccordionContent>
       </AccordionItem>
-      <Button variant={"check"} className="mt-8">
+      <Button variant={"green"} className="mt-8">
         Show All Questions
       </Button>
     </Accordion>

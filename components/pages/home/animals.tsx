@@ -87,14 +87,14 @@ const Animals = () => {
                       <p>Age: {age}</p>
                       <p>Days in cell: {days}</p>
                     </div>
-                    <Button variant={"check"}>Adopt me</Button>
+                    <Button variant={"green"}>Adopt me</Button>
                   </div>
                 </div>
               </div>
             ),
           )}
         </section>
-        <Button variant={"check"}>Check All Animals</Button>
+        <Button variant={"green"}>Check All Animals</Button>
       </Container>
     </section>
   );

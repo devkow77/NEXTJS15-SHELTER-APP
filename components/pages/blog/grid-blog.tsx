@@ -2,6 +2,7 @@ import { PaginationMenu, Container } from "@/components/index";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { formatDate } from "@/lib/functions";
 
 const query = `
   query getAllPosts{
@@ -43,15 +44,6 @@ async function getPosts(pageId: string) {
   );
 
   return { slicedPosts, currentPage, totalPages };
-}
-
-function formatDate(isoDate: string) {
-  const date = new Date(isoDate);
-  return date.toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  });
 }
 
 const POST_PER_PAGE = 5;
@@ -110,7 +102,7 @@ const GridBlog = async ({ pageId }: { pageId: string }) => {
                       />
                       <div className="absolute z-10 h-full w-full rounded-2xl duration-400 dark:bg-black/40 dark:hover:bg-black/0"></div>
                     </Link>
-                    <section className="flex justify-between">
+                    <section>
                       <div>
                         <p className="text-xs">
                           Released: {formatDate(createdAt)}
@@ -120,7 +112,6 @@ const GridBlog = async ({ pageId }: { pageId: string }) => {
                           {text.slice(0, 30)}...
                         </p>
                       </div>
-                      <div></div>
                     </section>
                   </div>
                 ),

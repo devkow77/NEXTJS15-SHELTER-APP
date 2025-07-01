@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="header-height from-neutral-950 to-green-950 pt-8 md:pt-16 dark:bg-gradient-to-b dark:text-white">
+    <header className="from-neutral-950 to-green-950 pb-16 lg:pb-32 dark:bg-gradient-to-b">
       <Container className="flex flex-col gap-10 sm:flex-row sm:gap-6">
         <section className="space-y-3 sm:w-1/2 lg:space-y-6">
           <h1 className="text-3xl font-black md:text-4xl lg:text-5xl">
@@ -19,10 +19,10 @@ const Header = () => {
             beautiful bond. Open your heart — and let your life be changed too.
           </p>
           <Link href="/animals">
-            <Button variant={"check"}>Meet the Animals 🐱</Button>
+            <Button variant={"green"}>Meet the Animals 🐱</Button>
           </Link>
         </section>
-        <section className="grid aspect-square grid-cols-2 gap-3 rounded-2xl sm:w-1/2 md:gap-6">
+        <section className="grid aspect-square grid-cols-2 gap-3 rounded-2xl sm:w-1/2 lg:gap-6">
           <div className="relative rounded-full bg-neutral-800">
             <Image
               alt="pet"

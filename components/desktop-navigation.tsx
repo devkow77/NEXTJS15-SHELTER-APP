@@ -62,7 +62,7 @@ export function DesktopNavigation() {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className={`${pathname == "/about" ? "text-green-600 dark:text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
+            className={`${pathname == "/about" ? "text-pink-600 dark:text-pink-400" : ""} ${navigationMenuTriggerStyle()}`}
           >
             <Link href="/about" className="bg-transparent">
               Who are we?

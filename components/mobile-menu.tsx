@@ -40,6 +40,10 @@ const MobileMenu = () => {
       return "dark:text-green-400 text-green-600";
     }
 
+    if (pathname === "/about") {
+      return "dark:text-pink-400 text-pink-600";
+    }
+
     if (
       pathname.startsWith("/blog/post/") ||
       pathname.startsWith("/blog/page/")
