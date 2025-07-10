@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Team, Baner } from "@/components/pages/about";
+import { Header, Team, Baner, HowToJoin } from "@/components/pages/about";
 
 const About = () => {
   return (
@@ -7,6 +7,7 @@ const About = () => {
       <Header />
       <Team />
       <Baner />
+      <HowToJoin />
     </main>
   );
 };

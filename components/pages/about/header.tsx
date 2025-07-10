@@ -21,7 +21,7 @@ const Header = () => {
             understand and meet the needs of our furry residents — helping them
             heal both physically and emotionally.
           </p>
-          <Link href="/animals">
+          <Link href="#team">
             <Button variant={"pink"}>See our people ♥️</Button>
           </Link>
         </section>

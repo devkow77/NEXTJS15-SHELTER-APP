@@ -17,6 +17,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { formSchema } from "@/lib/schema";
 import Container from "@/components/container";
 
+interface Data {
+  email: string;
+  message: string;
+}
+
 const ContactForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -26,12 +31,23 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = async (data: any) => {
-    const formData = JSON.parse(JSON.stringify(data));
+  const onSubmit = async (data: Data) => {
+    console.log(data);
     try {
-      form.reset();
+      const res = await fetch(`http://localhost:3000/api/send`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        form.reset();
+      } else {
+        const err = await res.json();
+        console.error("Error:", err);
+      }
     } catch (err) {
-      console.log(err);
+      console.error("Error:", err);
     }
   };
 

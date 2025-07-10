@@ -5,6 +5,10 @@ body {
   font-family: "Montserrat";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   min-height: calc(100vh - 106px);
 }

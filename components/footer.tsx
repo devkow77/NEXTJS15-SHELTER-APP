@@ -20,7 +20,7 @@ const links: Link[] = [
   },
   {
     name: "Who are we?",
-    href: "/about-us",
+    href: "/about",
   },
   {
     name: "Animals",

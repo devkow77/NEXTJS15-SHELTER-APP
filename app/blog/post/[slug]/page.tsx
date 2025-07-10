@@ -3,6 +3,7 @@ import { Container } from "@/components/index";
 import Link from "next/link";
 import Image from "next/image";
 import { formatDate } from "@/lib/functions";
+import { SmallImage } from "@/components/pages/post";
 
 const getPostAndOthers = async (slug: string) => {
   const query = `
@@ -64,21 +65,21 @@ const Post = async ({ params }: any) => {
       <Container className="space-y-16 lg:space-y-32">
         <section className="space-y-6 pt-8 text-center lg:pt-16">
           <div className="space-y-4 lg:space-y-8">
+            {/* Show main image */}
             <div className="relative mx-auto h-50 max-w-4xl rounded-2xl bg-neutral-800 md:h-75 lg:h-100">
               <Image
                 src={post.mainImage.url}
-                width={900}
-                height={600}
+                fill
                 alt={post.title}
-                className="absolute h-full w-full rounded-2xl object-cover object-center"
+                className="absolute rounded-2xl object-cover object-center"
               />
             </div>
+            {/* Show small images if exists */}
             {post.images.length ? (
               <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
-                <div className="aspect-video rounded-2xl bg-neutral-800"></div>
-                <div className="aspect-video rounded-2xl bg-neutral-800"></div>
-                <div className="aspect-video rounded-2xl bg-neutral-800"></div>
-                <div className="aspect-video rounded-2xl bg-neutral-800"></div>
+                {post.images.map((img: any, index: number) => (
+                  <SmallImage key={index} url={img.url} alt={post.title} />
+                ))}
               </div>
             ) : null}
           </div>
